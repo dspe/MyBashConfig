@@ -1,1 +1,45 @@
-/Users/pvr/.gitconfig
+[user]
+	name = dspe
+	email = vincent.royol@gmail.com
+
+[color]
+	ui = auto
+[alias]
+        co = checkout
+        ds = diff --staged
+	st = status -sb
+        amend = commit --amend -C HEAD
+        undo = reset --soft HEAD^
+        ls = log --pretty=format:"%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]" --decorate --date=short
+        standup = log --since '1 day ago' --oneline --author vincent.royol@gmail.com
+        graph = log --graph --pretty=format':%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset'
+[core]
+	pager = cat
+	whitespace = -trailing-space
+[diff]
+        mnemonicPrefix = true
+        wordRegex = .
+[fetch]
+        recurseSubmodules = on-demand
+[grep]
+        extendedRegexp = true
+[log]
+        abbrevCommit = true
+[merge]
+        conflictStyle = diff3
+[mergetool]
+        keepBackup = false
+        keepTemporaries = false
+        prompt = false
+[pull]
+        # This is GREAT… when you know what you're doing and are careful
+        # not to pull --no-rebase over a local line containing a true merge.
+        # rebase = true
+[push]
+        default = upstream
+[rerere]
+        # If, like me, you like rerere, decomment these
+        # autoupdate = true
+        # enabled = true
+[status]
+        submoduleSummary = true
